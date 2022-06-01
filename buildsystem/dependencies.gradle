@@ -1,0 +1,227 @@
+ext {
+
+    /*https://developer.android.com/jetpack/androidx/releases/appcompat*/
+    appCompatVersion = '1.4.1'
+    /*https://developer.android.com/jetpack/androidx/releases/core*/
+    androidxCoreVersion = '1.3.1'
+    /*https://developer.android.com/jetpack/androidx/releases/activity*/
+    androidxActivityVersion = '1.4.0'
+    /*https://developer.android.com/jetpack/androidx/releases/fragment*/
+    androidxFragmentVersion = '1.4.0'
+
+    def androidLibs = [
+            appCompat   : [group: 'androidx.appcompat', name: 'appcompat', version: appCompatVersion],
+            androidXCore: [group: 'androidx.core', name: 'core', version: androidxCoreVersion],
+            activityKtx : [group: 'androidx.activity', name: 'activity-ktx', version: androidxActivityVersion],
+            fragmentKtx : [group: 'androidx.fragment', name: 'fragment-ktx', version: androidxFragmentVersion]
+    ]
+
+    /*https://blog.jetbrains.com/kotlin/category/releases/*/
+    kotlinVersion = '1.6.21'
+    /*https://developer.android.com/kotlin/ktx*/
+    androidKtxVersion = '1.7.0'
+    /*https://github.com/Kotlin/kotlinx.coroutines/releases*/
+    coroutinesVersion = '1.6.2'
+    def kotlinDep = [
+            core        : [group: 'androidx.core', name: 'core-ktx', version: androidKtxVersion],
+            gradlePlugin: [group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: kotlinVersion],
+            stdlib      : [group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk7', version: kotlinVersion],
+            coroutines  : [group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-core', version: coroutinesVersion],
+            reflect     : [group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinVersion],
+    ]
+
+    /*https://github.com/google/dagger#dagger*/
+    daggerVersion = '2.42'
+    def daggerDep = [
+            core    : [group: 'com.google.dagger', name: 'dagger', version: daggerVersion],
+            compiler: [group: 'com.google.dagger', name: 'dagger-compiler', version: daggerVersion],
+    ]
+
+    /*https://developer.android.com/training/dependency-injection/hilt-android*/
+    hiltVersion = '2.38.1'
+    def hiltDep = [
+            core        : [group: 'com.google.dagger', name: 'hilt-android', version: hiltVersion],
+            compiler    : [group: 'com.google.dagger', name: 'hilt-compiler', version: hiltVersion],
+            gradlePlugin: [group: 'com.google.dagger', name: 'hilt-android-gradle-plugin', version: hiltVersion],
+
+    ]
+
+    /*https://developer.android.com/training/dependency-injection/hilt-jetpack*/
+    hiltJetpackVersion = "1.0.0-alpha03"
+    def hiltJetpackDep = [
+            viewModel: [group: 'androidx.hilt', name: 'hilt-lifecycle-viewmodel', version: hiltJetpackVersion],
+            compilerX: [group: 'androidx.hilt', name: 'hilt-compiler', version: hiltJetpackVersion],
+    ]
+
+    /*https://dl.google.com/dl/android/maven2/index.html*/
+    lifecycleExtensions = '2.2.0'
+    lifecycleCompiler = '2.4.1'
+    lifecycleViewModel = '2.4.1'
+    def archComponents = [
+            components        : [group: 'androidx.lifecycle', name: 'lifecycle-extensions', version: lifecycleExtensions],
+            componentsCompiler: [group: 'androidx.lifecycle', name: 'lifecycle-compiler', version: lifecycleCompiler],
+            viewModel         : [group: 'androidx.lifecycle', name: 'lifecycle-viewmodel', version: lifecycleViewModel],
+            viewModelKtx      : [group: 'androidx.lifecycle', name: 'lifecycle-viewmodel-ktx', version: lifecycleViewModel],
+    ]
+
+    /*https://developer.android.com/jetpack/androidx/releases/room*/
+    roomDbVersion = '2.3.0'
+    /*https://developer.android.com/jetpack/androidx/releases/preference*/
+    preferenceVersion = '1.2.0'
+    //https://developer.android.com/topic/libraries/architecture/datastore
+    dataStoreVersion = '1.0.0'
+    def storageDep = [
+            core      : [group: 'androidx.room', name: 'room-runtime', version: roomDbVersion],
+            compiler  : [group: 'androidx.room', name: 'room-compiler', version: roomDbVersion],
+            ktx       : [group: 'androidx.room', name: 'room-ktx', version: roomDbVersion],
+            preference: [group: 'androidx.preference', name: 'preference', version: preferenceVersion],
+            dataStore : [group: 'androidx.datastore', name: 'datastore-preferences', version: dataStoreVersion],
+    ]
+
+    /*https://github.com/square/okhttp/blob/master/CHANGELOG.md*/
+    okhttpVersion = '4.9.3'
+    /*https://github.com/square/retrofit/blob/master/CHANGELOG.md*/
+    retrofitVersion = '2.9.0'
+    /*https://github.com/google/gson/releases*/
+    gsonVersion = '2.9.0'
+    def networking = [
+            okhttp      : [group: 'com.squareup.okhttp3', name: 'okhttp', version: okhttpVersion],
+            okhttpLog   : [group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: okhttpVersion],
+            gson        : [group: 'com.google.code.gson', name: 'gson', version: gsonVersion],
+            retrofit    : [group: 'com.squareup.retrofit2', name: 'retrofit', version: retrofitVersion],
+            retrofitGson: [group: 'com.squareup.retrofit2', name: 'converter-gson', version: retrofitVersion],
+    ]
+
+//    rx = [
+//            /*https://github.com/ReactiveX/RxJava/releases*/
+//            java   : "io.reactivex.rxjava2:rxjava:2.2.12",
+//            /*https://github.com/ReactiveX/RxAndroid/releases*/
+//            android: "io.reactivex.rxjava2:rxandroid:2.1.1",
+//            /*https://github.com/ReactiveX/RxKotlin/releases*/
+//            kotlin : "io.reactivex.rxjava2:rxkotlin:2.4.0",
+//    ]
+
+    /*https://dl.google.com/dl/android/maven2/index.html*/
+    constraintLayoutVersion = '2.1.4'
+    recyclerviewVersion = '1.2.1'
+    materialVersion = '1.6.0'
+    /*https://github.com/bumptech/glide*/
+    /*https://bumptech.github.io/glide/int/okhttp3.html*/
+    glideVersion = '4.13.2'
+    lottieVersion = '3.3.0'
+    /*https://developer.android.com/jetpack/androidx/releases/viewpager2*/
+    viewpager2Version = '1.0.0'
+    navigationComponent = '2.0.0'
+    def ui = [
+            constraintLayout  : [group: 'androidx.constraintlayout', name: 'constraintlayout', version: constraintLayoutVersion],
+            recyclerview      : [group: 'androidx.recyclerview', name: 'recyclerview', version: recyclerviewVersion],
+            material          : [group: 'com.google.android.material', name: 'material', version: materialVersion],
+            glide             : [group: 'com.github.bumptech.glide', name: 'glide', version: glideVersion],
+            glideCompiler     : [group: 'com.github.bumptech.glide', name: 'compiler', version: glideVersion],
+            glideOkHttp       : [group: 'com.github.bumptech.glide', name: 'okhttp3-integration', version: glideVersion],
+            lottie            : [group: 'com.airbnb.android', name: 'lottie', version: lottieVersion],
+            viewPager2        : [group: 'androidx.viewpager2', name: 'viewpager2', version: viewpager2Version],
+            navigationFragment: [group: 'androidx.navigation', name: 'navigation-fragment-ktx', version: navigationComponent],
+            navigationUi      : [group: 'androidx.navigation', name: 'navigation-ui-ktx', version: navigationComponent],
+    ]
+
+    /*https://developer.android.com/studio/build/multidex*/
+    multidexVersion = '2.0.1'
+    /*https://github.com/JakeWharton/timber*/
+    timberVersion = '5.0.1'
+    def other = [
+            multidex: [group: 'androidx.multidex', name: 'multidex', version: multidexVersion],
+            timber  : [group: 'com.jakewharton.timber', name: 'timber', version: timberVersion]
+    ]
+
+    jUnit4Version = "4.13.2"
+    jUnit5Version = '5.8.2'
+    runnerVersion = '1.2.0'
+    assertKVersion = '0.25'
+    mockKVersion = '1.10.6'
+    roboelectricVersion = '4.0.2'
+    /*https://dl.google.com/dl/android/maven2/index.html*/
+    coreTestingVersion = '2.1.0'
+    def testing = [
+            junit               : [group: 'junit', name: 'junit', version: jUnit4Version],
+            junitJupiterApi     : [group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: jUnit5Version],
+            junitJupiterParam   : [group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: jUnit5Version],
+            junitJupiter        : [group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: jUnit5Version],
+            junitVintage        : [group: 'org.junit.vintage', name: 'junit-vintage-engine', version: jUnit5Version],
+            runner              : [group: 'androidx.test', name: 'runner', version: runnerVersion],
+            assertK             : [group: 'com.willowtreeapps.assertk', name: 'assertk-jvm', version: assertKVersion],
+            mockk               : [group: 'io.mockk', name: 'mockk', version: mockKVersion],
+            roboelectric        : [group: 'org.robolectric', name: 'robolectric', version: roboelectricVersion],
+            roboelectricMultidex: [group: 'org.robolectric', name: 'shadows-multidex', version: roboelectricVersion],
+            aacTesting          : [group: 'androidx.arch.core', name: 'core-testing', version: coreTestingVersion],
+            roomDb              : [group: 'androidx.room', name: 'room-testing', version: roomDbVersion],
+            coroutines          : [group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-test', version: coroutinesVersion]
+    ]
+
+    appDependencies = [
+            //Android
+            [configuration: "api", dependency: androidLibs.appCompat],
+            [configuration: "implementation", dependency: androidLibs.androidXCore],
+            [configuration: "implementation", dependency: androidLibs.activityKtx],
+            [configuration: "implementation", dependency: androidLibs.fragmentKtx],
+            //Kotlin
+            [configuration: "implementation", dependency: kotlinDep.core],
+//            [configuration: "implementation", dependency: kotlinDep.gradlePlugin],
+            [configuration: "api", dependency: kotlinDep.stdlib],
+            [configuration: "api", dependency: kotlinDep.coroutines],
+            [configuration: "api", dependency: kotlinDep.reflect],
+            //DI
+//            [configuration: "api", dependency: daggerDep.core],
+//            [configuration: "kapt", dependency: daggerDep.compiler],
+            [configuration: "api", dependency: hiltDep.core],
+            [configuration: "api", dependency: hiltDep.gradlePlugin],
+            [configuration: "api", dependency: hiltJetpackDep.viewModel],
+            [configuration: "kapt", dependency: hiltDep.compiler],
+            [configuration: "kapt", dependency: hiltJetpackDep.compilerX],
+            //Arch
+            [configuration: "api", dependency: archComponents.components],
+            [configuration: "kapt", dependency: archComponents.componentsCompiler],
+            [configuration: "api", dependency: archComponents.viewModel],
+            [configuration: "api", dependency: archComponents.viewModelKtx],
+            //Room
+            [configuration: "api", dependency: storageDep.core],
+            [configuration: "api", dependency: storageDep.ktx],
+            [configuration: "kapt", dependency: storageDep.compiler],
+            [configuration: "api", dependency: storageDep.preference],
+            [configuration: "implementation", dependency: storageDep.dataStore],
+            //Networking
+            [configuration: "api", dependency: networking.okhttp],
+            [configuration: "api", dependency: networking.okhttpLog],
+            [configuration: "api", dependency: networking.gson],
+            [configuration: "api", dependency: networking.retrofit],
+            [configuration: "api", dependency: networking.retrofitGson],
+            //UI
+            [configuration: "api", dependency: ui.constraintLayout],
+            [configuration: "api", dependency: ui.recyclerview],
+            [configuration: "api", dependency: ui.material],
+            [configuration: "api", dependency: ui.glide],
+            [configuration: "kapt", dependency: ui.glideCompiler],
+            [configuration: "api", dependency: ui.glideOkHttp],
+            [configuration: "api", dependency: ui.lottie],
+            [configuration: "api", dependency: ui.viewPager2],
+            [configuration: "api", dependency: ui.navigationUi],
+            [configuration: "api", dependency: ui.navigationFragment],
+            //Other
+            [configuration: "implementation", dependency: other.multidex],
+            [configuration: "implementation", dependency: other.timber],
+            //Testing
+            [configuration: "testImplementation", dependency: testing.junit],
+            [configuration: "testImplementation", dependency: testing.junitJupiter],
+            [configuration: "testImplementation", dependency: testing.junitJupiterApi],
+            [configuration: "testImplementation", dependency: testing.junitJupiterParam],
+            [configuration: "testImplementation", dependency: testing.junitVintage],
+            [configuration: "testImplementation", dependency: testing.runner],
+            [configuration: "testImplementation", dependency: testing.assertK],
+            [configuration: "testImplementation", dependency: testing.mockk],
+            [configuration: "testImplementation", dependency: testing.roboelectric],
+            [configuration: "testImplementation", dependency: testing.roboelectricMultidex],
+            [configuration: "testImplementation", dependency: testing.aacTesting],
+            [configuration: "testImplementation", dependency: testing.roomDb],
+            [configuration: "testImplementation", dependency: testing.coroutines],
+    ]
+}
