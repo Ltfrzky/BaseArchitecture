@@ -45,10 +45,6 @@ android {
     packagingOptions {
         resources.excludes.add("META-INF/*")
     }
-
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
@@ -56,4 +52,8 @@ dependencies {
     rootProject.appDependencies.each {
         add(it.configuration, it.dependency, it.options)
     }
+}
+
+kapt {
+    correctErrorTypes true
 }
