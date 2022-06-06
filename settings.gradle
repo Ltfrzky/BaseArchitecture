@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BaseArchitecture"
 include ':app'
-include ':presentation'
+include ':core'
+include ':feature-main'

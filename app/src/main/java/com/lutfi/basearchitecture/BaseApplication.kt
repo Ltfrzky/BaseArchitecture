@@ -7,7 +7,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 /**
- * @author Lutfi Rizky Ramadhan (lutfi.ramadhan@dana.id)
+ * @author Lutfi Rizky Ramadhan (lutfirizkyramadhan@gmail.com)
  * @version BaseApplication, v 0.1 01/06/2022 18:00 by Lutfi Rizky Ramadhan
  */
 @HiltAndroidApp

@@ -4,6 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1935" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/bg_rectangle_shadow.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_favorite.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_favorite_fill.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_home.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_home_fill.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_home_outline.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_settings.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_settings_fill.xml" value="0.246" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_settings_outline.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/drawable/ic_theaters.xml" value="0.1565" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/layout/activity_bottom_nav.xml" value="0.16802536231884058" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/feature-main/src/main/res/menu/menu_main.xml" value="0.3435185185185185" />
         <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/presentation/src/main/res/drawable/bg_rectangle_shadow.xml" value="0.1935" />
         <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/presentation/src/main/res/drawable/ic_favorite.xml" value="0.1935" />
         <entry key="..\:/Lutfi/AndroidStudioProject/base-architecture/presentation/src/main/res/drawable/ic_favorite_fill.xml" value="0.1935" />

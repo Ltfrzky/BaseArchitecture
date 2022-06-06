@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseArchitecture">
         <activity
-            android:name=".presentation.main.MainActivity"
+            android:name="com.lutfi.feature_main.bottomnav.BottomNavActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

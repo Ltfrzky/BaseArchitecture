@@ -9,7 +9,7 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
- * @author Lutfi Rizky Ramadhan (lutfi.ramadhan@dana.id)
+ * @author Lutfi Rizky Ramadhan (lutfirizkyramadhan@gmail.com)
  * @version DispatcherModule, v 0.1 01/06/2022 18:12 by Lutfi Rizky Ramadhan
  */
 @InstallIn(SingletonComponent::class)
