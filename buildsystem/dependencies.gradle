@@ -65,7 +65,7 @@ ext {
     ]
 
     /*https://developer.android.com/jetpack/androidx/releases/room*/
-    roomDbVersion = '2.3.0'
+    roomDbVersion = '2.4.2'
     /*https://developer.android.com/jetpack/androidx/releases/preference*/
     preferenceVersion = '1.2.0'
     //https://developer.android.com/topic/libraries/architecture/datastore
@@ -177,7 +177,7 @@ ext {
             //DI
             [configuration: "api", dependency: hiltDep.core],
             [configuration: "api", dependency: hiltDep.gradlePlugin],
-            [configuration: "api", dependency: hiltJetpackDep.viewModel],
+//            [configuration: "api", dependency: hiltJetpackDep.viewModel],
             [configuration: "kapt", dependency: hiltDep.compiler],
             [configuration: "kapt", dependency: hiltJetpackDep.compilerX],
             //Room
@@ -232,7 +232,7 @@ ext {
 //            [configuration: "kapt", dependency: daggerDep.compiler],
             [configuration: "api", dependency: hiltDep.core],
             [configuration: "api", dependency: hiltDep.gradlePlugin],
-            [configuration: "api", dependency: hiltJetpackDep.viewModel],
+//            [configuration: "api", dependency: hiltJetpackDep.viewModel],
             [configuration: "kapt", dependency: hiltDep.compiler],
             [configuration: "kapt", dependency: hiltJetpackDep.compilerX],
             //Arch
@@ -255,8 +255,8 @@ ext {
             //UI
 //            [configuration: "api", dependency: ui.constraintLayout],
 //            [configuration: "api", dependency: ui.recyclerview],
-//            [configuration: "api", dependency: ui.material],
-//            [configuration: "api", dependency: ui.glide],
+            [configuration: "api", dependency: ui.material],
+            [configuration: "api", dependency: ui.glide],
             [configuration: "kapt", dependency: ui.glideCompiler],
 //            [configuration: "api", dependency: ui.glideOkHttp],
 //            [configuration: "api", dependency: ui.lottie],
@@ -264,7 +264,7 @@ ext {
 //            [configuration: "api", dependency: ui.navigationUi],
 //            [configuration: "api", dependency: ui.navigationFragment],
             //Other
-//            [configuration: "implementation", dependency: other.multidex],
+            [configuration: "implementation", dependency: other.multidex],
 //            [configuration: "api", dependency: other.timber],
             //Testing
             [configuration: "testImplementation", dependency: testing.junit],
@@ -303,7 +303,6 @@ ext {
             [configuration: "testImplementation", dependency: testing.assertK],
             [configuration: "testImplementation", dependency: testing.mockk],
             [configuration: "testImplementation", dependency: testing.aacTesting],
-            [configuration: "testImplementation", dependency: testing.roomDb],
             [configuration: "testImplementation", dependency: testing.coroutines],
             [configuration: "testImplementation", dependency: testing.turbine],
     ]
@@ -340,7 +339,7 @@ ext {
             [configuration: "testImplementation", dependency: testing.assertK],
             [configuration: "testImplementation", dependency: testing.mockk],
             [configuration: "testImplementation", dependency: testing.aacTesting],
-            [configuration: "testImplementation", dependency: testing.roomDb],
+//            [configuration: "testImplementation", dependency: testing.roomDb],
             [configuration: "testImplementation", dependency: testing.coroutines],
             [configuration: "testImplementation", dependency: testing.turbine],
     ]

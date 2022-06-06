@@ -36,7 +36,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
+    implementation project(":core")
+    implementation project(":feature-main:domain")
     rootProject.presentationDependencies.each {
         add(it.configuration, it.dependency, it.options)
     }
