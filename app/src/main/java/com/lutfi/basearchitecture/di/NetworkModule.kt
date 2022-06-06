@@ -10,9 +10,11 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Cache
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -29,13 +31,13 @@ class NetworkModule {
     @Singleton
     fun providesRetrofit(
         gsonConverterFactory: GsonConverterFactory,
-//        rxJava2CallAdapterFactory: RxJava2CallAdapterFactory,
+        rxJava3CallAdapterFactory: RxJava3CallAdapterFactory,
         okHttpClient: OkHttpClient
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(gsonConverterFactory)
-//            .addCallAdapterFactory(rxJava2CallAdapterFactory)
+            .addCallAdapterFactory(rxJava3CallAdapterFactory)
             .client(okHttpClient)
             .build()
     }
@@ -48,6 +50,7 @@ class NetworkModule {
             .connectTimeout(10, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .readTimeout(10, TimeUnit.SECONDS)
+        client.addInterceptor(apiKeyIntercept())
 
         if (BuildConfig.DEBUG) {
             val logging = HttpLoggingInterceptor()
@@ -58,6 +61,21 @@ class NetworkModule {
         return client.build()
     }
 
+    private fun apiKeyIntercept(): Interceptor {
+        return Interceptor {
+            val original = it.request()
+            val originalUrl = original.url
+
+            val newUrl = originalUrl.newBuilder()
+                .addQueryParameter("api_key", BuildConfig.API_KEY)
+                .build()
+
+            val request = original.newBuilder().url(newUrl).build()
+
+            it.proceed(request)
+        }
+    }
+
     @Provides
     @Singleton
     fun providesOkhttpCache(@ApplicationContext context: Context): Cache {
@@ -65,10 +83,10 @@ class NetworkModule {
         return Cache(context.cacheDir, cacheSize.toLong())
     }
 
-//    @Provides
-//    @Singleton
-//    fun providesRxJavaCallAdapterFactory(): RxJava2CallAdapterFactory =
-//        RxJava2CallAdapterFactory.create()
+    @Provides
+    @Singleton
+    fun providesRxJavaCallAdapterFactory(): RxJava3CallAdapterFactory =
+        RxJava3CallAdapterFactory.create()
 
     @Provides
     @Singleton

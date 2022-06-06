@@ -27,12 +27,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", "BASE_URL", "${baseEnvProp["BASE_URL"]}"
+            buildConfigField "String", "API_KEY", "${baseEnvProp["API_KEY"]}"
         }
 
         debug {
             multiDexEnabled true
             debuggable true
             buildConfigField "String", "BASE_URL", "${baseEnvProp["BASE_URL_DEBUG"]}"
+            buildConfigField "String", "API_KEY", "${baseEnvProp["API_KEY"]}"
         }
     }
     compileOptions {

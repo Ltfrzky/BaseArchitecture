@@ -89,20 +89,21 @@ ext {
             okhttpLog   : [group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: okhttpVersion],
             gson        : [group: 'com.google.code.gson', name: 'gson', version: gsonVersion],
             retrofit    : [group: 'com.squareup.retrofit2', name: 'retrofit', version: retrofitVersion],
+            retrofitRx3    : [group: 'com.squareup.retrofit2', name: 'adapter-rxjava3', version: retrofitVersion],
             retrofitGson: [group: 'com.squareup.retrofit2', name: 'converter-gson', version: retrofitVersion],
     ]
 
     rxJavaVersion = '3.1.5'
     rxAndroidVersion = '3.0.0'
     rxKotlinVersion = '3.0.1'
-//    rx = [
-//            /*https://github.com/ReactiveX/RxJava/releases*/
-//            java   : "io.reactivex.rxjava2:rxjava:2.2.12",
-//            /*https://github.com/ReactiveX/RxAndroid/releases*/
-//            android: "io.reactivex.rxjava2:rxandroid:2.1.1",
-//            /*https://github.com/ReactiveX/RxKotlin/releases*/
-//            kotlin : "io.reactivex.rxjava2:rxkotlin:2.4.0",
-//    ]
+    rx = [
+            /*https://github.com/ReactiveX/RxJava/releases*/
+            java   : [group: 'io.reactivex.rxjava3', name: 'rxjava', version: rxJavaVersion],
+            /*https://github.com/ReactiveX/RxAndroid/releases*/
+            android: [group: 'io.reactivex.rxjava3', name: 'rxandroid', version: rxAndroidVersion],
+            /*https://github.com/ReactiveX/RxKotlin/releases*/
+            kotlin : [group: 'io.reactivex.rxjava3', name: 'rxkotlin', version: rxKotlinVersion],
+    ]
 
     /*https://dl.google.com/dl/android/maven2/index.html*/
     constraintLayoutVersion = '2.1.4'
@@ -180,6 +181,10 @@ ext {
 //            [configuration: "api", dependency: hiltJetpackDep.viewModel],
             [configuration: "kapt", dependency: hiltDep.compiler],
             [configuration: "kapt", dependency: hiltJetpackDep.compilerX],
+            //Rx
+            [configuration: "api", dependency: rx.java],
+            [configuration: "api", dependency: rx.android],
+            [configuration: "api", dependency: rx.kotlin],
             //Room
             [configuration: "api", dependency: storageDep.core],
             [configuration: "api", dependency: storageDep.ktx],
@@ -191,6 +196,7 @@ ext {
             [configuration: "api", dependency: networking.okhttpLog],
             [configuration: "api", dependency: networking.gson],
             [configuration: "api", dependency: networking.retrofit],
+            [configuration: "api", dependency: networking.retrofitRx3],
             [configuration: "api", dependency: networking.retrofitGson],
             //UI
             [configuration: "api", dependency: ui.navigationUi],
@@ -290,6 +296,10 @@ ext {
 //            [configuration: "api", dependency: kotlinDep.stdlib],
 //            [configuration: "api", dependency: kotlinDep.coroutines],
 //            [configuration: "api", dependency: kotlinDep.reflect],
+            //Rx
+            [configuration: "api", dependency: rx.java],
+            [configuration: "api", dependency: rx.android],
+            [configuration: "api", dependency: rx.kotlin],
             //Other
 //            [configuration: "implementation", dependency: other.multidex],
 //            [configuration: "api", dependency: other.timber],
@@ -314,6 +324,10 @@ ext {
 //            [configuration: "api", dependency: kotlinDep.stdlib],
 //            [configuration: "api", dependency: kotlinDep.coroutines],
 //            [configuration: "api", dependency: kotlinDep.reflect],
+            //Rx
+            [configuration: "api", dependency: rx.java],
+            [configuration: "api", dependency: rx.android],
+            [configuration: "api", dependency: rx.kotlin],
             //Room
 //            [configuration: "api", dependency: storageDep.core],
 //            [configuration: "api", dependency: storageDep.ktx],
@@ -321,11 +335,12 @@ ext {
 //            [configuration: "api", dependency: storageDep.preference],
 //            [configuration: "api", dependency: storageDep.dataStore],
             //Networking
-//            [configuration: "api", dependency: networking.okhttp],
-//            [configuration: "api", dependency: networking.okhttpLog],
-//            [configuration: "api", dependency: networking.gson],
-//            [configuration: "api", dependency: networking.retrofit],
-//            [configuration: "api", dependency: networking.retrofitGson],
+            [configuration: "api", dependency: networking.okhttp],
+            [configuration: "api", dependency: networking.okhttpLog],
+            [configuration: "api", dependency: networking.gson],
+            [configuration: "api", dependency: networking.retrofit],
+            [configuration: "api", dependency: networking.retrofitRx3],
+            [configuration: "api", dependency: networking.retrofitGson],
             //Other
             [configuration: "implementation", dependency: other.multidex],
 //            [configuration: "api", dependency: other.timber],

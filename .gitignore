@@ -3,6 +3,7 @@
 /base-env.properties
 /local.properties
 /.idea/sonarlint
+/.idea/misc.xml
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
