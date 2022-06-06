@@ -36,8 +36,7 @@ android {
 }
 
 dependencies {
-
-    rootProject.presentationDependencies.each {
+    rootProject.appDependencies.each {
         add(it.configuration, it.dependency, it.options)
     }
 }

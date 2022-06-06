@@ -38,7 +38,7 @@ ext {
     ]
 
     /*https://developer.android.com/training/dependency-injection/hilt-android*/
-    hiltVersion = '2.38.1'
+    hiltVersion = '2.42'
     def hiltDep = [
             core        : [group: 'com.google.dagger', name: 'hilt-android', version: hiltVersion],
             compiler    : [group: 'com.google.dagger', name: 'hilt-compiler', version: hiltVersion],
@@ -166,11 +166,11 @@ ext {
     appDependencies = [
             //Android
             [configuration: "api", dependency: androidLibs.appCompat],
-            [configuration: "implementation", dependency: androidLibs.androidXCore],
-            [configuration: "implementation", dependency: androidLibs.activityKtx],
-            [configuration: "implementation", dependency: androidLibs.fragmentKtx],
+            [configuration: "api", dependency: androidLibs.androidXCore],
+            [configuration: "api", dependency: androidLibs.activityKtx],
+            [configuration: "api", dependency: androidLibs.fragmentKtx],
             //Kotlin
-            [configuration: "implementation", dependency: kotlinDep.core],
+            [configuration: "api", dependency: kotlinDep.core],
             [configuration: "api", dependency: kotlinDep.stdlib],
             [configuration: "api", dependency: kotlinDep.coroutines],
             [configuration: "api", dependency: kotlinDep.reflect],
@@ -185,7 +185,7 @@ ext {
             [configuration: "api", dependency: storageDep.ktx],
             [configuration: "kapt", dependency: storageDep.compiler],
             [configuration: "api", dependency: storageDep.preference],
-            [configuration: "implementation", dependency: storageDep.dataStore],
+            [configuration: "api", dependency: storageDep.dataStore],
             //Networking
             [configuration: "api", dependency: networking.okhttp],
             [configuration: "api", dependency: networking.okhttpLog],
@@ -197,7 +197,7 @@ ext {
             [configuration: "api", dependency: ui.navigationFragment],
             //Other
             [configuration: "implementation", dependency: other.multidex],
-            [configuration: "implementation", dependency: other.timber],
+            [configuration: "api", dependency: other.timber],
             //Testing
             [configuration: "testImplementation", dependency: testing.junit],
             [configuration: "testImplementation", dependency: testing.junitJupiter],
@@ -217,16 +217,16 @@ ext {
 
     presentationDependencies = [
             //Android
-            [configuration: "api", dependency: androidLibs.appCompat],
-            [configuration: "implementation", dependency: androidLibs.androidXCore],
-            [configuration: "implementation", dependency: androidLibs.activityKtx],
-            [configuration: "implementation", dependency: androidLibs.fragmentKtx],
+//            [configuration: "api", dependency: androidLibs.appCompat],
+//            [configuration: "api", dependency: androidLibs.androidXCore],
+//            [configuration: "api", dependency: androidLibs.activityKtx],
+//            [configuration: "api", dependency: androidLibs.fragmentKtx],
             //Kotlin
-            [configuration: "implementation", dependency: kotlinDep.core],
+//            [configuration: "api", dependency: kotlinDep.core],
 //            [configuration: "implementation", dependency: kotlinDep.gradlePlugin],
-            [configuration: "api", dependency: kotlinDep.stdlib],
-            [configuration: "api", dependency: kotlinDep.coroutines],
-            [configuration: "api", dependency: kotlinDep.reflect],
+//            [configuration: "api", dependency: kotlinDep.stdlib],
+//            [configuration: "api", dependency: kotlinDep.coroutines],
+//            [configuration: "api", dependency: kotlinDep.reflect],
             //DI
 //            [configuration: "api", dependency: daggerDep.core],
 //            [configuration: "kapt", dependency: daggerDep.compiler],
@@ -236,36 +236,36 @@ ext {
             [configuration: "kapt", dependency: hiltDep.compiler],
             [configuration: "kapt", dependency: hiltJetpackDep.compilerX],
             //Arch
-            [configuration: "api", dependency: archComponents.components],
+//            [configuration: "api", dependency: archComponents.components],
             [configuration: "kapt", dependency: archComponents.componentsCompiler],
-            [configuration: "api", dependency: archComponents.viewModel],
-            [configuration: "api", dependency: archComponents.viewModelKtx],
+//            [configuration: "api", dependency: archComponents.viewModel],
+//            [configuration: "api", dependency: archComponents.viewModelKtx],
             //Room
-            [configuration: "api", dependency: storageDep.core],
-            [configuration: "api", dependency: storageDep.ktx],
+//            [configuration: "api", dependency: storageDep.core],
+//            [configuration: "api", dependency: storageDep.ktx],
             [configuration: "kapt", dependency: storageDep.compiler],
-            [configuration: "api", dependency: storageDep.preference],
-            [configuration: "implementation", dependency: storageDep.dataStore],
+//            [configuration: "api", dependency: storageDep.preference],
+//            [configuration: "api", dependency: storageDep.dataStore],
             //Networking
-            [configuration: "api", dependency: networking.okhttp],
-            [configuration: "api", dependency: networking.okhttpLog],
-            [configuration: "api", dependency: networking.gson],
-            [configuration: "api", dependency: networking.retrofit],
-            [configuration: "api", dependency: networking.retrofitGson],
+//            [configuration: "api", dependency: networking.okhttp],
+//            [configuration: "api", dependency: networking.okhttpLog],
+//            [configuration: "api", dependency: networking.gson],
+//            [configuration: "api", dependency: networking.retrofit],
+//            [configuration: "api", dependency: networking.retrofitGson],
             //UI
-            [configuration: "api", dependency: ui.constraintLayout],
-            [configuration: "api", dependency: ui.recyclerview],
-            [configuration: "api", dependency: ui.material],
-            [configuration: "api", dependency: ui.glide],
+//            [configuration: "api", dependency: ui.constraintLayout],
+//            [configuration: "api", dependency: ui.recyclerview],
+//            [configuration: "api", dependency: ui.material],
+//            [configuration: "api", dependency: ui.glide],
             [configuration: "kapt", dependency: ui.glideCompiler],
-            [configuration: "api", dependency: ui.glideOkHttp],
-            [configuration: "api", dependency: ui.lottie],
-            [configuration: "api", dependency: ui.viewPager2],
-            [configuration: "api", dependency: ui.navigationUi],
-            [configuration: "api", dependency: ui.navigationFragment],
+//            [configuration: "api", dependency: ui.glideOkHttp],
+//            [configuration: "api", dependency: ui.lottie],
+//            [configuration: "api", dependency: ui.viewPager2],
+//            [configuration: "api", dependency: ui.navigationUi],
+//            [configuration: "api", dependency: ui.navigationFragment],
             //Other
-            [configuration: "implementation", dependency: other.multidex],
-            [configuration: "implementation", dependency: other.timber],
+//            [configuration: "implementation", dependency: other.multidex],
+//            [configuration: "api", dependency: other.timber],
             //Testing
             [configuration: "testImplementation", dependency: testing.junit],
             [configuration: "testImplementation", dependency: testing.junitJupiter],
@@ -285,14 +285,14 @@ ext {
 
     domainDependencies = [
             //Kotlin
-            [configuration: "implementation", dependency: kotlinDep.core],
+//            [configuration: "api", dependency: kotlinDep.core],
 //            [configuration: "implementation", dependency: kotlinDep.gradlePlugin],
-            [configuration: "api", dependency: kotlinDep.stdlib],
-            [configuration: "api", dependency: kotlinDep.coroutines],
-            [configuration: "api", dependency: kotlinDep.reflect],
+//            [configuration: "api", dependency: kotlinDep.stdlib],
+//            [configuration: "api", dependency: kotlinDep.coroutines],
+//            [configuration: "api", dependency: kotlinDep.reflect],
             //Other
-            [configuration: "implementation", dependency: other.multidex],
-            [configuration: "implementation", dependency: other.timber],
+//            [configuration: "implementation", dependency: other.multidex],
+//            [configuration: "api", dependency: other.timber],
             //Testing
             [configuration: "testImplementation", dependency: testing.junit],
             [configuration: "testImplementation", dependency: testing.junitJupiter],
@@ -302,8 +302,6 @@ ext {
             [configuration: "testImplementation", dependency: testing.runner],
             [configuration: "testImplementation", dependency: testing.assertK],
             [configuration: "testImplementation", dependency: testing.mockk],
-            [configuration: "testImplementation", dependency: testing.roboelectric],
-            [configuration: "testImplementation", dependency: testing.roboelectricMultidex],
             [configuration: "testImplementation", dependency: testing.aacTesting],
             [configuration: "testImplementation", dependency: testing.roomDb],
             [configuration: "testImplementation", dependency: testing.coroutines],
@@ -312,26 +310,26 @@ ext {
 
     dataDependencies = [
             //Kotlin
-            [configuration: "implementation", dependency: kotlinDep.core],
+//            [configuration: "api", dependency: kotlinDep.core],
 //            [configuration: "implementation", dependency: kotlinDep.gradlePlugin],
-            [configuration: "api", dependency: kotlinDep.stdlib],
-            [configuration: "api", dependency: kotlinDep.coroutines],
-            [configuration: "api", dependency: kotlinDep.reflect],
+//            [configuration: "api", dependency: kotlinDep.stdlib],
+//            [configuration: "api", dependency: kotlinDep.coroutines],
+//            [configuration: "api", dependency: kotlinDep.reflect],
             //Room
-            [configuration: "api", dependency: storageDep.core],
-            [configuration: "api", dependency: storageDep.ktx],
+//            [configuration: "api", dependency: storageDep.core],
+//            [configuration: "api", dependency: storageDep.ktx],
             [configuration: "kapt", dependency: storageDep.compiler],
-            [configuration: "api", dependency: storageDep.preference],
-            [configuration: "implementation", dependency: storageDep.dataStore],
+//            [configuration: "api", dependency: storageDep.preference],
+//            [configuration: "api", dependency: storageDep.dataStore],
             //Networking
-            [configuration: "api", dependency: networking.okhttp],
-            [configuration: "api", dependency: networking.okhttpLog],
-            [configuration: "api", dependency: networking.gson],
-            [configuration: "api", dependency: networking.retrofit],
-            [configuration: "api", dependency: networking.retrofitGson],
+//            [configuration: "api", dependency: networking.okhttp],
+//            [configuration: "api", dependency: networking.okhttpLog],
+//            [configuration: "api", dependency: networking.gson],
+//            [configuration: "api", dependency: networking.retrofit],
+//            [configuration: "api", dependency: networking.retrofitGson],
             //Other
             [configuration: "implementation", dependency: other.multidex],
-            [configuration: "implementation", dependency: other.timber],
+//            [configuration: "api", dependency: other.timber],
             //Testing
             [configuration: "testImplementation", dependency: testing.junit],
             [configuration: "testImplementation", dependency: testing.junitJupiter],
@@ -341,8 +339,6 @@ ext {
             [configuration: "testImplementation", dependency: testing.runner],
             [configuration: "testImplementation", dependency: testing.assertK],
             [configuration: "testImplementation", dependency: testing.mockk],
-            [configuration: "testImplementation", dependency: testing.roboelectric],
-            [configuration: "testImplementation", dependency: testing.roboelectricMultidex],
             [configuration: "testImplementation", dependency: testing.aacTesting],
             [configuration: "testImplementation", dependency: testing.roomDb],
             [configuration: "testImplementation", dependency: testing.coroutines],

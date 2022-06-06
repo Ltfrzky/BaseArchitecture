@@ -48,9 +48,9 @@ android {
 }
 
 dependencies {
-    implementation implementation(project(':core',))
-    implementation implementation(project(':feature-main',))
-    rootProject.appDependencies.each {
+    implementation project(':core')
+    implementation project(':feature-main')
+    rootProject.presentationDependencies.each {
         add(it.configuration, it.dependency, it.options)
     }
 }
